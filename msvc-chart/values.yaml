@@ -15,8 +15,8 @@ backend:
     name:
     port: 8082
   image:
-    name: alexvolkov8319/msvc-backend:0.0.1
-    tag: latest
+    name: alexvolkov8319/msvc-backend
+    tag: 0.0.1
     pullPolicy: IfNotPresent
   hpa:
     enabled: false
@@ -44,8 +44,8 @@ gateway:
     #   Can be one of ClusterIP, NodePort or LoadBalancer
     type: LoadBalancer
   image:
-    name: alexvolkov8319/msvc-gateway:0.0.1
-    tag: latest
+    name: alexvolkov8319/msvc-gateway
+    tag: 0.0.1
     pullPolicy: IfNotPresent
   hpa:
     enabled: false
