@@ -3,7 +3,7 @@ entries:
   msvc-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-09-22T13:57:15.529101+03:00"
+    created: "2024-09-22T14:10:36.268328+03:00"
     description: Microservices project
     digest: f2bb0063490d03314eea19e62a2b926f1a3a79f2b3ffa07fdc162a77a9963b68
     maintainers:
@@ -17,6 +17,6 @@ entries:
     - https://github.com/Kislichenko/project1-deploy-2024
     type: application
     urls:
-    - https://github.com/Kislichenko/project1-deploy-2024/msvc-chart-1.0.0.tgz
+    - kislichenko.github.io/project1-deploy-2024/msvc-chart-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-22T13:57:15.528688+03:00"
+generated: "2024-09-22T14:10:36.267479+03:00"
