@@ -13,7 +13,7 @@ backend:
   #        cpu: 100m
   service:
     name:
-    port: 8080
+    port: 8082
   image:
     name: alexvolkov8319/msvc-backend:0.0.1
     tag: latest
