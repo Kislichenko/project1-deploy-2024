@@ -3,9 +3,9 @@ entries:
   msvc-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-09-22T14:57:54.491442+03:00"
+    created: "2024-09-22T15:01:23.161577+03:00"
     description: Microservices project
-    digest: dad21b7203db2bd4800abfadf532831678fa2f751ed326a3ea3ed0e0bb5e5081
+    digest: 7004c2d56057eb823fb07d7b6a737723306254b5e4a19c37760decb4e6fea071
     maintainers:
     - email: alex.volkov8319@gmail.ru
       name: Bogdan K
@@ -19,4 +19,4 @@ entries:
     urls:
     - kislichenko.github.io/project1-deploy-2024/msvc-chart-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-22T14:57:54.490748+03:00"
+generated: "2024-09-22T15:01:23.16112+03:00"

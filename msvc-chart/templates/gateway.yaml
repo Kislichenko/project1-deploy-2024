@@ -1,15 +1,31 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: {{ include "msvc-chart.fullname" . }}
+  name: {{ include "msvc-chart.gateway.deployment.name" . }}
   labels:
     {{- include "msvc-chart.labels" . | nindent 4 }}
+    tier: gateway
 spec:
-  type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+  replicas: {{ .Values.gateway.deployment.replicas }}
   selector:
-    {{- include "msvc-chart.selectorLabels" . | nindent 4 }}
+    matchLabels:
+      {{- include "msvc-chart.selectorLabels" . | nindent 6 }}
+      tier: gateway
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include "msvc-chart.propertiesHash" . }}
+      labels:
+        {{- include "msvc-chart.selectorLabels" . | nindent 8 }}
+        tier: gateway
+    spec:
+      serviceAccountName: {{ include "msvc-chart.serviceAccountName" . }}
+      containers:
+        - name: {{ include "msvc-chart.gateway.container.name" . }}
+          image: "{{ .Values.gateway.image.name }}:{{ .Values.gateway.image.tag }}"
+          ima
